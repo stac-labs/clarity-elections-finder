@@ -35,20 +35,20 @@ if len(sys.argv) == 1:
 
 # Find out when the last election id was
 state = sys.argv[1].upper()
-results = get_recent_election(state)
-print(results["msg"])
+# results = get_recent_election(state)
+# print(results["msg"])
 
-# If there was no election manifest found, exit
-if results["id"] == None:
-    exit()
+# # If there was no election manifest found, exit
+# if results["id"] == None:
+#     exit()
 
-# If there was an election manifest, make sure the user wants to proceed
-proceed = input("Do you want to proceed with finding the next one? (y/n) ")
-if proceed.lower() != "y":
-    exit()
+# # If there was an election manifest, make sure the user wants to proceed
+# proceed = input("Do you want to proceed with finding the next one? (y/n) ")
+# if proceed.lower() != "y":
+#     exit()
 
-# Override the starting ID if passed in by the user
-last_good_index = results["id"]
+# # Override the starting ID if passed in by the user
+# last_good_index = results["id"]
 if len(sys.argv) == 3:
     last_good_index = int(sys.argv[2])
 
